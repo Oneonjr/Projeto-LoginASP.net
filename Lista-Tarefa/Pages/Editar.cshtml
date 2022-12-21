@@ -1,0 +1,20 @@
+@page
+@model Lista_Tarefa.Pages.Editar
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<form asp-page="/Editar" method="post">
+<input type="hidden" asp-for="Id"/>
+  <div class="mb-3">
+    <label asp-for="Nome" class="form-label">Nome</label>
+    <input asp-for="Nome" class="form-control">
+    <span asp-validation-for="Nome" class="text-danger"></span>
+  </div>
+  <div class="mb-3">
+    <label asp-for="Usuario" class="form-label">Usuário</label>
+    <input asp-for="Usuario" class="form-control">
+    <span asp-validation-for="Usuario" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>
